@@ -22,5 +22,18 @@ namespace Watchmen
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void btnFolderSelect_Click(object sender, EventArgs e)
+        {
+            if (fbFolder.ShowDialog(this) == DialogResult.OK) {
+                txtFolder.Text = fbFolder.SelectedPath;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }
